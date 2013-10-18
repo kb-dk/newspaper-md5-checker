@@ -49,7 +49,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>dk.statsbiblioteket.newspaper.md5checker.MD5CheckerComponent</mainClass>
+                            <mainClass>dk.statsbiblioteket.newspaper.md5checker.MD5Checker</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
