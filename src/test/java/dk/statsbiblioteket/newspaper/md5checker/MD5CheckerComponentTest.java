@@ -11,7 +11,20 @@ import dk.statsbiblioteket.medieplatform.autonomous.ResultCollector;
  */
 public class MD5CheckerComponentTest {
 
-    private static final String EXPECTED_REPORT = "<result tool=\"MD5_checker_component\" version=\"0.1\" xmlns=\"http://schemas.statsbiblioteket.dk/result/\"><outcome>Failure</outcome><date>[date]</date><failures><failure><filereference>B400022028241-RT1/400022028241-14/1795-06-13-01/AdresseContoirsEfterretninger-1795-06-13-01-0006-brik.jp2/contents</filereference><type>checksum</type><component>MD5_checker_component-0.1</component><description>Expected checksum d41d8cd98f00b204e9800998ecf8427f, but was d41d8cd98f00b204e9800998ecf8427e</description></failure></failures></result>";
+    private static final String EXPECTED_REPORT = "<result tool=\"MD5_checker_component\" version=\"0.1\" xmlns=\"http://schemas.statsbiblioteket.dk/result/\">\n"+
+                                                  "    <outcome>Failure</outcome>\n" +
+                                                  "    <date>[date]</date>\n" +
+                                                  "    <failures>\n" +
+                                                  "        <failure>\n" +
+                                                  "            <filereference>B400022028241-RT1/400022028241-14/1795-06-13-01/AdresseContoirsEfterretninger-1795-06-13-01-0006-brik.jp2/contents</filereference>\n"
+                                                  +
+                                                  "            <type>checksum</type>\n" +
+                                                  "            <component>MD5_checker_component-0.1</component>\n" +
+                                                  "            <description>Expected checksum d41d8cd98f00b204e9800998ecf8427f, but was d41d8cd98f00b204e9800998ecf8427e</description>\n"
+                                                  +
+                                                  "        </failure>\n" +
+                                                  "    </failures>\n" +
+                                                  "</result>";
 
     @Test
     /**
