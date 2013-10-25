@@ -92,5 +92,10 @@
         </plugins>
     </build>
 
-
+    <scm>
+        <url>https://github.com/statsbiblioteket/newspaper-md5-checker</url>
+        <connection>scm:git:https://github.com/statsbiblioteket/newspaper-md5-checker.git</connection>
+        <developerConnection>scm:git:git@github.com:statsbiblioteket/newspaper-md5-checker.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 </project>
