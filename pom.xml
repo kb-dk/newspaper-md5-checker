@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -11,13 +9,13 @@
     </parent>
 
     <artifactId>newspaper-md5-checker</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 
     <dependencies>
         <dependency>
             <groupId>dk.statsbiblioteket.newspaper</groupId>
             <artifactId>autonomous-component</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>0.1</version>
         </dependency>
 
         <dependency>
@@ -96,6 +94,6 @@
         <url>https://github.com/statsbiblioteket/newspaper-md5-checker</url>
         <connection>scm:git:https://github.com/statsbiblioteket/newspaper-md5-checker.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/newspaper-md5-checker.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>newspaper-md5-checker-0.1</tag>
     </scm>
 </project>
