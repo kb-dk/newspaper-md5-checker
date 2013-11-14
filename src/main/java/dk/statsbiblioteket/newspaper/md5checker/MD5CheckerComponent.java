@@ -29,17 +29,6 @@ public class MD5CheckerComponent
     }
 
     @Override
-    public String getComponentName() {
-        return "MD5_checker_component";
-
-    }
-
-    @Override
-    public String getComponentVersion() {
-        return "0.1";
-    }
-
-    @Override
     public String getEventID() {
         return "Checksums_checked";
     }
