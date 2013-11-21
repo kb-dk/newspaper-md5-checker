@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import dk.statsbiblioteket.util.Bytes;
 import dk.statsbiblioteket.util.Checksums;
+import dk.statsbiblioteket.util.Strings;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +23,7 @@ import java.util.Properties;
 public class MD5CheckerComponent
         extends AbstractRunnableComponent {
 
+    private static final String CHECKSUM = "checksum";
     private Logger log = LoggerFactory.getLogger(getClass());
 
     public MD5CheckerComponent(Properties properties) {
@@ -58,8 +60,9 @@ public class MD5CheckerComponent
                         checksum = attributeEvent.getChecksum();
                     } catch (IOException e) {
                         log.warn("Error getting checksum in {}", attributeEvent.getName(), e);
-                        resultCollector.addFailure(attributeEvent.getName(), "checksum", getFullName(),
-                                                   "Error getting checksum: " + e.toString());
+                        resultCollector.addFailure(attributeEvent.getName(), CHECKSUM, getClass().getSimpleName(),
+                                                   "2F-O1: Error getting checksum: " + e.toString(),
+                                                   Strings.getStackTrace(e));
                         break;
                     }
                     String calculatedChecksum;
@@ -67,15 +70,16 @@ public class MD5CheckerComponent
                         calculatedChecksum = calculateChecksum(attributeEvent.getData());
                     } catch (IOException e) {
                         log.warn("Error calculating checksum on data in {}", attributeEvent.getName(), e);
-                        resultCollector.addFailure(attributeEvent.getName(), "checksum", getFullName(),
-                                                   "Error calculating checksum on data: " + e.toString());
+                        resultCollector.addFailure(attributeEvent.getName(), CHECKSUM, getClass().getSimpleName(),
+                                                   "2F-O1: Error calculating checksum on data: " + e.toString(),
+                                                   Strings.getStackTrace(e));
                         break;
                     }
                     if (!calculatedChecksum.equalsIgnoreCase(checksum)) {
                         log.debug("Expected checksum {}, but was {} in {}", checksum, calculatedChecksum,
                                   attributeEvent.getName());
-                        resultCollector.addFailure(attributeEvent.getName(), "checksum", getFullName(),
-                                                   "Expected checksum " + checksum + ", but was " + calculatedChecksum);
+                        resultCollector.addFailure(attributeEvent.getName(), CHECKSUM, getClass().getSimpleName(),
+                                                   "2F-O1: Expected checksum " + checksum + ", but was " + calculatedChecksum);
                     }
                     break;
                 }
