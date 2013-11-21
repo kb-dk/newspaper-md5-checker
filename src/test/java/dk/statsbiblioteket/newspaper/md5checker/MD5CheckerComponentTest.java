@@ -40,9 +40,9 @@ public class MD5CheckerComponentTest {
                           +
                           "            <type>checksum</type>\n"
                           +
-                          "            <component>" + md5CheckerComponent.getComponentName() + "-" + md5CheckerComponent.getComponentVersion() + "</component>\n"
+                          "            <component>MockupIteratorSuper</component>\n"
                           +
-                          "            <description>Expected checksum d41d8cd98f00b204e9800998ecf8427f, but was d41d8cd98f00b204e9800998ecf8427e</description>\n"
+                          "            <description>2F-O1: Expected checksum d41d8cd98f00b204e9800998ecf8427f, but was d41d8cd98f00b204e9800998ecf8427e</description>\n"
                           +
                           "        </failure>\n"
                           +
