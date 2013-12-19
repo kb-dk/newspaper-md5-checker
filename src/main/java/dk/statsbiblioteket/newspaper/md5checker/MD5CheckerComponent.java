@@ -79,7 +79,7 @@ public class MD5CheckerComponent
                         log.debug("Expected checksum {}, but was {} in {}", checksum, calculatedChecksum,
                                   attributeEvent.getName());
                         resultCollector.addFailure(attributeEvent.getName(), CHECKSUM, getClass().getSimpleName(),
-                                                   "2F-O1: Expected checksum " + checksum + ", but was " + calculatedChecksum);
+                                                   "2F-O1: Checksum mismatch. Value in md5-file: " + checksum + "; calculated checksum: " + calculatedChecksum);
                     }
                     break;
                 }

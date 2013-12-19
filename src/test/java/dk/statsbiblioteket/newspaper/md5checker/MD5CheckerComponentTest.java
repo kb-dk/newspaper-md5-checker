@@ -42,7 +42,7 @@ public class MD5CheckerComponentTest {
                           +
                           "            <component>MockupIteratorSuper</component>\n"
                           +
-                          "            <description>2F-O1: Expected checksum d41d8cd98f00b204e9800998ecf8427f, but was d41d8cd98f00b204e9800998ecf8427e</description>\n"
+                          "            <description>2F-O1: Checksum mismatch. Value in md5-file: d41d8cd98f00b204e9800998ecf8427f; calculated checksum: d41d8cd98f00b204e9800998ecf8427e</description>\n"
                           +
                           "        </failure>\n"
                           +
