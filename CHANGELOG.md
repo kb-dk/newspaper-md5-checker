@@ -1,4 +1,5 @@
 1.3
+* Update to autonomous component framework 1.5
 * Updated to newspaper-parent 1.1.
 
 1.2
