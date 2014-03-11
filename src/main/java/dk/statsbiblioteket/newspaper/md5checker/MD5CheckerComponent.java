@@ -3,6 +3,7 @@ package dk.statsbiblioteket.newspaper.md5checker;
 import dk.statsbiblioteket.medieplatform.autonomous.AbstractRunnableComponent;
 import dk.statsbiblioteket.medieplatform.autonomous.Batch;
 import dk.statsbiblioteket.medieplatform.autonomous.ResultCollector;
+import dk.statsbiblioteket.medieplatform.autonomous.SBOIBasedAbstractRunnableComponent;
 import dk.statsbiblioteket.medieplatform.autonomous.iterator.common.AttributeParsingEvent;
 import dk.statsbiblioteket.medieplatform.autonomous.iterator.common.ParsingEvent;
 import dk.statsbiblioteket.medieplatform.autonomous.iterator.common.TreeIterator;
@@ -21,7 +22,7 @@ import java.util.Properties;
  * Check MD5 of all nodes
  */
 public class MD5CheckerComponent
-        extends AbstractRunnableComponent {
+        extends SBOIBasedAbstractRunnableComponent {
 
     private static final String CHECKSUM = "checksum";
     private Logger log = LoggerFactory.getLogger(getClass());
