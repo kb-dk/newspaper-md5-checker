@@ -1,5 +1,5 @@
 1.4
-* Update to autonomous component framework 1.7
+* Update to autonomous component framework 1.6
 
 1.3
 * Update to autonomous component framework 1.5
