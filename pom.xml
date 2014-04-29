@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>newspaper-md5-checker</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.4-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
