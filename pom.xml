@@ -9,19 +9,19 @@
     </parent>
 
     <artifactId>newspaper-md5-checker</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
 
     <dependencies>
         <dependency>
             <groupId>dk.statsbiblioteket.newspaper</groupId>
             <artifactId>sboi-doms-autonomous-component</artifactId>
-            <version>1.7-SNAPSHOT</version>
+            <version>1.7</version>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.newspaper</groupId>
             <artifactId>tree-processor-runnable-component</artifactId>
-            <version>1.7-SNAPSHOT</version>
+            <version>1.7</version>
         </dependency>
 
         <dependency>
@@ -100,6 +100,6 @@
         <url>https://github.com/statsbiblioteket/newspaper-md5-checker</url>
         <connection>scm:git:https://github.com/statsbiblioteket/newspaper-md5-checker.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/newspaper-md5-checker.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>newspaper-md5-checker-1.4</tag>
     </scm>
 </project>
