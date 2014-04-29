@@ -9,19 +9,19 @@
     </parent>
 
     <artifactId>newspaper-md5-checker</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.4-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>dk.statsbiblioteket.newspaper</groupId>
             <artifactId>sboi-doms-autonomous-component</artifactId>
-            <version>1.8-SNAPSHOT</version>
+            <version>1.7-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>dk.statsbiblioteket.newspaper</groupId>
             <artifactId>tree-processor-runnable-component</artifactId>
-            <version>1.8-SNAPSHOT</version>
+            <version>1.7-SNAPSHOT</version>
         </dependency>
 
         <dependency>
