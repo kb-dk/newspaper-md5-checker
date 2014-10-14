@@ -13,7 +13,7 @@ public class MD5CheckerComponentTest {
     /**
      * Test checking checksums on two batches
      */
-    public void testDoWorkOnBatch() throws Exception {
+    public void testdoWorkOnItem() throws Exception {
         MD5CheckerComponent md5CheckerComponent = new MockupIteratorSuper(System.getProperties());
 
         // Run on first batch with one wrong checksum
@@ -22,7 +22,7 @@ public class MD5CheckerComponentTest {
                 md5CheckerComponent.getComponentVersion());
         Batch batch = new Batch("400022028241");
         batch.setRoundTripNumber(1);
-        md5CheckerComponent.doWorkOnBatch(batch, result);
+        md5CheckerComponent.doWorkOnItem(batch, result);
 
         // Assert one failure with the expected report
         Assert.assertFalse(result.isSuccess(), result.toReport() + "\n");
@@ -57,7 +57,7 @@ public class MD5CheckerComponentTest {
         result = new ResultCollector(md5CheckerComponent.getComponentName(), md5CheckerComponent.getComponentVersion());
         batch = new Batch("400022028241");
         batch.setRoundTripNumber(2);
-        md5CheckerComponent.doWorkOnBatch(batch, result);
+        md5CheckerComponent.doWorkOnItem(batch, result);
 
         // Assert no errors
         Assert.assertTrue(result.isSuccess(), result.toReport() + "\n");

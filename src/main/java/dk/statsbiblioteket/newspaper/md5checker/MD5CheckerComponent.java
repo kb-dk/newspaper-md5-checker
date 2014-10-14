@@ -42,7 +42,7 @@ public class MD5CheckerComponent
      * @param batch The batch to check
      * @param resultCollector Collector to get the result.
      */
-    public void doWorkOnBatch(Batch batch, ResultCollector resultCollector) throws Exception {
+    public void doWorkOnItem(Batch batch, ResultCollector resultCollector) throws Exception {
         TreeIterator iterator = createIterator(batch);
         while (iterator.hasNext()) {
             ParsingEvent next = iterator.next();

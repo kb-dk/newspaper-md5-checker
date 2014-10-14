@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import dk.statsbiblioteket.medieplatform.autonomous.CallResult;
 import dk.statsbiblioteket.medieplatform.autonomous.RunnableComponent;
-import dk.statsbiblioteket.medieplatform.autonomous.SBOIDomsAutonomousComponentUtils;
+import dk.statsbiblioteket.medieplatform.autonomous.NewspaperBatchAutonomousComponentUtils;
 
 import java.util.Properties;
 
@@ -21,7 +21,7 @@ public class MD5Checker {
      * @param args the arguments.
      *
      * @throws Exception
-     * @see SBOIDomsAutonomousComponentUtils#parseArgs(String[])
+     *NewspaperBatchAutonomousComponentUtilstUtils#parseArgs(String[])
      */
     public static void main(String... args) throws Exception {
         System.exit(doMain(args));
@@ -33,18 +33,18 @@ public class MD5Checker {
      * @param args the arguments.
      *
      * @throws Exception
-     * @see SBOIDomsAutonomousComponentUtils#parseArgs(String[])
+NewspaperBatchAutonomousComponentUtilsmponentUtils#parseArgs(String[])
      */
     public static int doMain(String[] args) throws Exception {
         log.info("Starting with args {}", args);
 
         //Parse the args to a properties construct
-        Properties properties = SBOIDomsAutonomousComponentUtils.parseArgs(args);
+        ProperNewspaperBatchAutonomousComponentUtilsmousComponentUtils.parseArgs(args);
 
         //make a new runnable component from the properties
         RunnableComponent component = new MD5CheckerComponent(properties);
 
-        CallResult result = SBOIDomsAutonomousComponentUtils.startAutonomousComponent(properties, component);
+    NewspaperBatchAutonomousComponentUtilsAutonomousComponentUtils.startAutonomousComponent(properties, component);
 
         System.out.println(result);
         return result.containsFailures();
