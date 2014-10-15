@@ -1,5 +1,6 @@
 package dk.statsbiblioteket.newspaper.md5checker;
 
+import dk.statsbiblioteket.medieplatform.autonomous.Batch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,12 +40,12 @@ NewspaperBatchAutonomousComponentUtilsmponentUtils#parseArgs(String[])
         log.info("Starting with args {}", args);
 
         //Parse the args to a properties construct
-        ProperNewspaperBatchAutonomousComponentUtilsmousComponentUtils.parseArgs(args);
+        Properties properties = NewspaperBatchAutonomousComponentUtils.parseArgs(args);
 
         //make a new runnable component from the properties
-        RunnableComponent component = new MD5CheckerComponent(properties);
+        RunnableComponent<Batch> component = new MD5CheckerComponent(properties);
 
-    NewspaperBatchAutonomousComponentUtilsAutonomousComponentUtils.startAutonomousComponent(properties, component);
+        CallResult<Batch> result = NewspaperBatchAutonomousComponentUtils.startAutonomousComponent(properties, component);
 
         System.out.println(result);
         return result.containsFailures();
