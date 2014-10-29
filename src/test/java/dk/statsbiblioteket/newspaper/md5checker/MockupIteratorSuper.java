@@ -5,6 +5,7 @@ import dk.statsbiblioteket.medieplatform.autonomous.iterator.common.TreeIterator
 import dk.statsbiblioteket.medieplatform.autonomous.iterator.filesystem.transforming.TransformingIteratorForFileSystems;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Properties;
 import java.util.regex.Pattern;
 
@@ -30,6 +31,7 @@ public class MockupIteratorSuper extends MD5CheckerComponent {
     protected TreeIterator createIterator(Batch batch) {
         File dataDir = new File(Thread.currentThread().getContextClassLoader().getResource("scratch").getFile());
         File batchDir = new File(dataDir, batch.getFullID());
-        return new TransformingIteratorForFileSystems(batchDir, Pattern.quote("."),".*\\.jp2$",".md5");
+        return new TransformingIteratorForFileSystems(batchDir, Pattern.quote("."),".*\\.jp2$",".md5",
+                                                      Arrays.asList("transfer_complete", "transfer_acknowledged"));
     }
 }
