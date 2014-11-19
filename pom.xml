@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>newspaper-md5-checker</artifactId>
-    <version>1.5</version>
+    <version>1.6-SNAPSHOT</version>
 
     <dependencies>
 
@@ -17,12 +17,12 @@
         <dependency>
             <groupId>dk.statsbiblioteket.newspaper</groupId>
             <artifactId>tree-processor-runnable-component</artifactId>
-            <version>2.0</version>
+            <version>2.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>dk.statsbiblioteket.newspaper</groupId>
             <artifactId>newspaper-autonomous-component</artifactId>
-            <version>2.0</version>
+            <version>2.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -101,6 +101,6 @@
         <url>https://github.com/statsbiblioteket/newspaper-md5-checker</url>
         <connection>scm:git:https://github.com/statsbiblioteket/newspaper-md5-checker.git</connection>
         <developerConnection>scm:git:git@github.com:statsbiblioteket/newspaper-md5-checker.git</developerConnection>
-        <tag>newspaper-md5-checker-1.5</tag>
+        <tag>HEAD</tag>
     </scm>
 </project>
